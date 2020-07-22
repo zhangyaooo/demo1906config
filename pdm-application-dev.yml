@@ -1,0 +1,22 @@
+server:
+  port: 8763
+
+spring:
+  redis:
+    host: localhost
+    database: 0
+    port: 6379
+  datasource:
+    url: jdbc:mysql://localhost:3306/1906yhq?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    druid:
+      initial-size: 5
+      min-idle: 10
+      max-active: 20
+    driver-class-name: com.mysql.cj.jdbc.Drive
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapper/*.xml
+ # type-aliases-package: com.mr.mradmin.entity
